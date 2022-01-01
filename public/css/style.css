@@ -614,6 +614,9 @@ cursor: pointer;
 
 .navbar-area {
   background-color: #5832DA;
+  border-bottom: 1px solid  rgba(18, 53, 91, 0.15);
+  
+  
 }
 
 .navbar-area.is-sticky {
@@ -1331,11 +1334,9 @@ Main Banner Area
 .banner-area-two {
   position: relative;
   z-index: 1;
-  background-image: url(../images/home-two/home-two-bg.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   padding: 70px 0;
+height: 900px;
+background: #5832DA;
 }
 
 .banner-content-two h1 {
@@ -1343,7 +1344,9 @@ Main Banner Area
   margin-bottom: 20px;
   line-height: 1.2;
   color: var(--titleColor);
-  max-width: 600px;
+  min-width: 1206px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .banner-content-two p {
@@ -1353,8 +1356,14 @@ Main Banner Area
 }
 
 .banner-content-two .banner-btn .two {
-  margin-left: 20px;
+  width: 308px;
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 34px;
+  
+
 }
+
 
 .banner-item-slider {
   position: relative;
