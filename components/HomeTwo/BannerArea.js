@@ -5,108 +5,81 @@ import styled from "styled-components";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
 
 const ColoredText = styled.span``;
-const SvgTopLeft = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 364px;
-  left: -76px;
-  top: 10px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgTopLeft = styled.img`
+  margin-top: -50px;
+  width: 300px;
 `;
-const SvgTopLeftCenter = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 364px;
-  left: 410px;
-  top: 202px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgTopLeftCenter = styled.img`
+  margin-top: 10px;
+  width: 300px;
 `;
-const SvgTopCenter = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 364px;
-  left: 900px;
-  top: 48px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgTopCenter = styled.img`
+  width: 300px;
+  margin-top: -180px;
 `;
 
-const SvgTopCenterRight = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 364px;
-  left: 1400px;
-  top: 322px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgTopCenterRight = styled.img`
+  width: 300px;
+  margin-bottom: -100px;
 `;
-const SvgBottomLeft = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 270px;
-  left: 74px;
-  top: 700px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgBottomLeft = styled.img`
+  width: 300px;
+  margin-bottom: -10px;
+  margin-left: 50px;
 `;
 
-const SvgBottomCenter = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 270px;
-  left: 600px;
-  top: 750px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgBottomCenter = styled.img`
+  width: 300px;
+  margin-bottom: -60px;
 `;
 
-const SvgBottomRight = styled.div`
-  position: absolute;
-  width: 368px;
-  height: 364px;
-  left: 1080px;
-  top: 700px;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 7.89%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 32px;
+const SvgBottomRight = styled.img`
+  width: 300px;
+  margin-bottom: -30px;
+  margin-right: 100px;
+`;
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 800px;
+  z-index: 3;
 `;
 
+const Button = styled.button`
+  width: 308px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 34px;
+  color: #5832da;
+  border: none;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  &:hover {
+    background: ;
+  }
+`;
+
+const TopWrapper = styled.div`
+  position: relative;
+  z-index: -9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -910px;
+  overflow: hidden;
+  gap: 100px;
+  min-height: 600px;
+`;
+const ButtomWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 100px;
+  min-height: 350px;
+`;
 const BannerArea = () => {
   const [display, setDisplay] = useState(false);
   const [isMounted, setisMounted] = useState(false);
@@ -123,34 +96,35 @@ const BannerArea = () => {
           <div className="row align-items-center">
             <div className="col-lg-12">
               <div className="banner-content-two">
-                <h1>
-                  Find affordable <ColoredText>Learning</ColoredText> Resources
-                </h1>
-                <div className="banner-btn">
-                  <Link href="/add-wallet">
-                    <a className="default-btn two border-radius-5">
-                      Get in Touch
-                    </a>
-                  </Link>
-                </div>
+                <FlexContainer>
+                  <h1>
+                    Find affordable <ColoredText>Learning</ColoredText>{" "}
+                    Resources
+                  </h1>
+                  <div className="banner-btn">
+                    <Button>Get in Touch</Button>
+                  </div>
+                </FlexContainer>
               </div>
             </div>
           </div>
         </div>
+        <TopWrapper>
+          <SvgTopLeft src="../images/Card.svg" alt="Images" />
 
-        <SvgTopLeft />
+          <SvgTopLeftCenter src="../images/card_two.svg" alt="Images" />
 
-        <SvgTopLeftCenter />
+          <SvgTopCenter src="../images/card_three.svg" alt="Images" />
 
-        <SvgTopCenter />
+          <SvgTopCenterRight src="../images/card_four.svg" alt="Images" />
+        </TopWrapper>
+        <ButtomWrapper>
+          <SvgBottomLeft src="../images/card-five.svg" alt="Images" />
 
-        <SvgTopCenterRight />
+          <SvgBottomCenter src="../images/card_six.svg" alt="Images" />
 
-        <SvgBottomLeft />
-
-        <SvgBottomCenter />
-
-        <SvgBottomRight />
+          <SvgBottomRight src="../images/card_seven.svg" alt="Images" />
+        </ButtomWrapper>
       </div>
     </>
   );

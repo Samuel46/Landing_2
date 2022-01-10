@@ -6,8 +6,6 @@ import Link from "../../utils/ActiveLink";
 const Logo = styled.h5`
   width: 160px;
   height: 48px;
-  font-family: IBM Plex Serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 34px;
   line-height: 125%;
@@ -36,7 +34,7 @@ const NavbarTwo = () => {
 
   //sticky menu
   const showStickyMenu = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 0) {
       setSticky(true);
     } else {
       setSticky(false);
